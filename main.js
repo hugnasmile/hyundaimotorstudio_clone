@@ -1,9 +1,11 @@
 function openNav() {
   document.getElementById("myNav").style.height = "30%";
+  document.body.style.overflow = "hidden";
 }
 
 function closeNav() {
   document.getElementById("myNav").style.height = "0%";
+  document.body.style.overflow = "initial";
 }
 
 $("#slide-open").click(function(){  //버튼 클릭 시
