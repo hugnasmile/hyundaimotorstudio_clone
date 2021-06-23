@@ -1,33 +1,20 @@
-function openNav() {
+function slideDown() {
   document.getElementById("myNav").style.height = "30%";
+}
+
+function slideUp() {
+  document.getElementById("myNav").style.height = "0%";
+}
+
+function openNav() {
+  document.getElementById("mobileNav").style.width = "100%";
   document.body.style.overflow = "hidden";
 }
 
 function closeNav() {
-  document.getElementById("myNav").style.height = "0%";
+  document.getElementById("mobileNav").style.width = "0%";
   document.body.style.overflow = "initial";
 }
-
-$("#slide-open").click(function(){  //버튼 클릭 시
-
-    if($("#burger").hasClass('on')){ //메뉴가 X 상태일때
-    
-      $("#burger").removeClass('on'); //메뉴 원복
-      $("#slide").removeClass('on');  //슬라이드 메뉴 원복
-     
-    //   $("#slide").on('scroll touchmove mousewheel', function(e){
-    //     e.preventDefault();       
-    //     e.stopPropagation();       
-    //     return false;       
-    //     })
-        
-    } else{
-    
-      $("#burger").addClass('on');  
-      $("#slide").addClass('on');     
-     
-    }
-    });
     
     var acc = document.getElementsByClassName("accordion");
     
@@ -83,4 +70,9 @@ var swiper = new Swiper(".mySwiper", {
     },
   });
 
-  $( 'html, body' ).stop().animate( { scrollTop : 0 } )
+
+  $(".top").click(function(){  
+    $( 'html, body' ).stop().animate( { scrollTop : 0 } );
+      });
+
+
