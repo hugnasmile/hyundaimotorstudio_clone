@@ -111,8 +111,7 @@ header .logo-area img {
   color: rgb(55, 233, 114);
 }
 
-header .slide-open,
-.slide-menu-wrapper {
+header .mobile-menu-bar {
   display: none;
 }
 
@@ -218,6 +217,9 @@ header .slide-open,
   .slide-menu-wrapper {
     display: block;
   }
+  header .mobile-menu-bar {
+    display: initial;
+  }
 
   header .wrapper {
     display: flex;
@@ -231,14 +233,6 @@ header .slide-open,
     width: 200px;
   }
 
-  .header .slide-open {
-    border: none;
-    background-color: white;
-    cursor: pointer;
-  }
-  .header .slide-open .burger i {
-    font-size: var(--medium-font);
-  }
   .slide {
     width: 100%;
     height: 100vh;
@@ -257,7 +251,6 @@ header .slide-open,
     transition: left 0.3s;
   }
   .slide-title {
-    width: 100%;
     display: flex;
     flex-direction: column;
     padding-left: var(--small-padding);
@@ -265,20 +258,27 @@ header .slide-open,
     border-bottom: 1px solid #e1e1e1;
   }
   .slide-title .lan {
+    position: initial;
     display: flex;
-    justify-content: flex-start;
-    width: 60%;
+    justify-content: space-between;
+    width: 30%;
     padding: var(--small-padding) 0;
   }
+  .slide-title .lan li.active {
+    text-decoration: underline;
+  }
+  .slide-title .member {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    font-size: var(--small-font);
+  }
+
   .slide-title .logo img {
     width: 60%;
     padding: var(--small-padding) 0;
   }
-  .slide-title .member {
-    display: flex;
-    width: 30%;
-    font-size: var(--small-font);
-  }
+
   .slide.on {
     position: fixed;
     left: 0;
@@ -296,6 +296,115 @@ header .slide-open,
   .slide ul .active {
     text-decoration: underline;
     text-underline-position: under;
+  }
+
+  .mobile-menu-bar {
+    display: initial;
+  }
+  .mobile-menu-bar .logo {
+    padding: 33px 0;
+    background-color: white;
+  }
+  .mobile-menu-bar .logo img {
+    padding-left: 33px;
+  }
+
+  .overlay {
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    right: 0;
+    background-color: white;
+    overflow-y: hidden;
+    transition: 0.3s;
+  }
+
+  .overlay-content {
+    position: relative;
+    width: 100%;
+  }
+
+  .overlay-content .panel a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: var(--base-font);
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  .overlay-content .panel a:hover,
+  .overlay-content .panel a:focus {
+    color: black;
+  }
+
+  .overlay .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    font-size: 60px;
+  }
+
+  .hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 1;
+  }
+
+  .overlay-content button.accordion {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    transition: 0.5s;
+    text-align: left;
+    padding: 10px;
+    background-color: transparent;
+  }
+
+  .overlay-content button.accordion > p {
+    float: left;
+    margin-left: 10px;
+    width: 76%;
+  }
+
+  .overlay-content button.accordion:after {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    content: "\f077";
+    font-family: "fontawesome";
+    float: right;
+    position: relative;
+    top: 4px;
+    padding-right: 30px;
+    color: rgb(158, 169, 184);
+  }
+
+  .overlay-content button.accordion.active:after {
+    content: "\f078";
+    font-family: "fontawesome";
+    color: var(--blue-color);
+  }
+
+  .overlay-content .panel {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-top: 1px solid #acacac83;
+    color: #666666;
+    display: flex;
+    flex-direction: column;
+  }
+  .slide .panel a {
+    padding: calc(var(--small-padding) / 2) 0;
   }
 
   button.accordion {
