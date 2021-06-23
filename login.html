@@ -29,7 +29,7 @@
                  <li><a href="#">LANGUAGE</a></li>
              </ul>
          </div>
-         <nav class="nav" Onmouseenter="openNav()">
+         <nav class="nav" Onmouseenter="slideDown()">
              <ul>
                  <li><a href="#">현대모터스튜디오</a></li>
                  <li><a href="#">통합예약</a></li>
@@ -37,7 +37,7 @@
                  <li><a href="#">프로그램안내</a></li>
                  <li><a href="#">소개</a></li>
              </ul>
-             <div id="myNav" class="drop-down"  Onmouseleave="closeNav()">
+             <div id="myNav" class="drop-down"  Onmouseleave="slideUp()">
                  <div class="wrapper" >
                      <ul>
                          <li><a href="#">고양</a></li>
@@ -72,73 +72,76 @@
                  </div>
                </div>  
          </nav>
-         <button class="slide-open" id="slide-open"> 
-             <div class="burger" id="burger">
-                 <i class="fas fa-bars"></i>
-             </div>
-         </button>
+ 
+         <div class="mobile-menu-bar">
+             <div id="mobileNav" class="overlay">
+                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                 <div class="logo">
+                     <img src="img/content/HMS_Logo_bk.svg" alt="">
+                 </div>
+                 <div class="overlay-content" id="slide">
+                     <div class="slide-title">
+                         <ul class="lan">
+                             <li class="active"><a href="#">한국어</a></li>
+                             <li><a href="#">English</a></li>
+                             <li><a href="#">中文</a></li>
+                         </ul>
+                         <ul class="member">
+                             <li><a href="login.html">LOGIN</a></li>
+                             <li><a href="#">JOIN</a></li>
+                         </ul>
+                     </div>
+                     <button class="accordion">
+                         <p>현대모터스튜디오</p>
+                     </button>
+                     <div class="panel">
+                         <a href="#">고양</a>
+                         <a href="#">서울</a>
+                         <a href="#">하남</a>
+                         <a href="#">부산</a>
+                         <a href="#">베이징</a>
+                         <a href="#">모스크바</a>
+                         </div>
+                         <button class="accordion">
+                         <p>통합예약</p>
+                         </button>
+                         <div class="panel">
+                         <a href="#">전시예약</a>
+                         <a href="#">시승예약</a>
+                         <a href="#">프로그램예약</a>
+                     </div>
+                     <button class="accordion">
+                     <p>전시안내</p>
+                     </button>
+                     <div class="panel">
+                     <a href="#">체험전시</a>
+                     <a href="#">차량전시</a>
+                     <a href="#">아트전시</a>
+                     </div>
+                     <button class="accordion">
+                     <p>프로그램안내</p>
+                     </button>
+                     <div class="panel">
+                     <a href="#">시승프로그램</a>
+                     <a href="#">키즈프로그램</a>
+                     <a href="#">교육프로그램</a>
+                     </div>
+                     <button class="accordion">
+                     <p>소개</p>
+                     </button>
+                     <div class="panel">
+                     <a href="#">브랜드</a>
+                     <a href="#">공지사항</a>
+                     <a href="#">이용안내</a>
+                     <a href="#">이벤트</a>
+                     <a href="#">뉴스룸</a>
+                     </div>
+                 </div>
+               </div>    
+               <span class="hamburger" onclick="openNav()">&#9776;</span>
+         </div>
         </div>
      </header>
-     <div class="slide-menu-wrapper">
-         <div class="slide" id="slide">
-             <div class="slide-title">
-               <ul class="lan">
-                   <li class="active"><a href="#">한국어</a></li>
-                   <li><a href="#">English</a></li>
-                   <li><a href="#">中文</a></li>
-               </ul>
-               <ul class="member">
-                   <li><a href="#">LOGIN</a></li>
-                   <li><a href="#">JOIN</a></li>
-               </ul>
-             </div>
-             <button class="accordion">
-              <p>현대모터스튜디오</p>
-             </button>
-             <div class="panel">
-              <a href="#">고양</a>
-              <a href="#">서울</a>
-              <a href="#">하남</a>
-              <a href="#">부산</a>
-              <a href="#">베이징</a>
-              <a href="#">모스크바</a>
-              </div>
-              <button class="accordion">
-                 <p>통합예약</p>
-                </button>
-                <div class="panel">
-                 <a href="#">전시예약</a>
-                 <a href="#">시승예약</a>
-                 <a href="#">프로그램예약</a>
-             </div>
-             <button class="accordion">
-             <p>전시안내</p>
-             </button>
-             <div class="panel">
-             <a href="#">체험전시</a>
-             <a href="#">차량전시</a>
-             <a href="#">아트전시</a>
-             </div>
-             <button class="accordion">
-             <p>프로그램안내</p>
-             </button>
-             <div class="panel">
-             <a href="#">시승프로그램</a>
-             <a href="#">키즈프로그램</a>
-             <a href="#">교육프로그램</a>
-             </div>
-             <button class="accordion">
-             <p>소개</p>
-             </button>
-             <div class="panel">
-             <a href="#">브랜드</a>
-             <a href="#">공지사항</a>
-             <a href="#">이용안내</a>
-             <a href="#">이벤트</a>
-             <a href="#">뉴스룸</a>
-             </div>
-           </div>
-     </div>
     <div class="main">
         <div class="wrapper">
             <div class="login-box">
