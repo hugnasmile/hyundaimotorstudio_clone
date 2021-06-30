@@ -275,6 +275,7 @@
 .swiper-button-prev,
 .swiper-button-next {
   z-index: 4;
+  color: black;
 }
 .main .section3 .slider .swiper-button-next {
   position: absolute;
