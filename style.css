@@ -382,11 +382,7 @@
   .main .section2 .video-container {
     height: auto;
   }
-<<<<<<< HEAD
-  .main .section2 .text {
-=======
   .main .section2 .text{
->>>>>>> a3213b47e119224374616a966632ba5c2c3c2704
     font-size: var(--base-font);
   }
   .main .section3 .title h1,
