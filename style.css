@@ -392,7 +392,13 @@
   .main .section3 .title h1 {
     font-size: var(--medium-font);
   }
-
+  .main .section3 .slider .swiper-button-prev{
+    left: -35px;
+  }
+  .main .section3 .slider .swiper-button-next{
+    right: -35px;
+  }
+  
   .swiper-slide {
     text-align: center;
   }
