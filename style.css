@@ -304,20 +304,23 @@
   outline: none;
   cursor: pointer;
 }
-.main button i {
+.main .buttons button i {
   font-size: var(--medium-font);
 }
-.main .reserve {
+.main .buttons .reserve {
   background-color: rgb(255, 219, 13);
   margin-bottom: var(--small-padding);
 }
-.main .reserve i:after {
+.main .buttons .reserve i:after {
   content: "예약";
   font-size: var(--base-font);
   display: block;
   padding-top: 7px;
 }
-.main .top i:after {
+.main .buttons .top{
+  background-color: #dfdfdf;
+}
+.main .buttons .top i:after {
   content: "TOP";
   font-size: var(--base-font);
   display: block;
